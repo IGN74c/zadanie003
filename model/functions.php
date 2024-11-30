@@ -36,12 +36,12 @@ class GetProducts extends Database
             $query .= ' AND category = ?';
         }
         if ($before_price) {
-            $types .= 'd';
+            $types .= 'i';
             $params[] = $before_price;
             $query .= ' AND price >= ?';
         }
         if ($after_price) {
-            $types .= 'd';
+            $types .= 'i';
             $params[] = $after_price;
             $query .= ' AND price <= ?';
         }
